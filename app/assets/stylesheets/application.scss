@@ -1,0 +1,38 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body {font-size: 1.75em}
+
+.buffer-top{
+	margin-top: 2em;
+}
+.task{
+	margin-bottom: 1em;
+
+	.action{opacity: 0;}
+		&:hover .action{
+		opacity: 1;
+		transition: opacity 0.5s ease;
+		}
+}
+.priority_1 {color: #009090}
+.priority_2 {color: #c09000}
+.priority_3 {color: #c00000}
+.completed_true .titile {color: #c0c0c0; text-decoration: line-through}
+
+.done{
+	margin-left: 10px;
+}
+.completed_true .done{ display: none }

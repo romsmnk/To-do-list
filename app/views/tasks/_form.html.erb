@@ -1,0 +1,8 @@
+<div class = "col-md-6">
+<%= simple_form_for @task do |f| %>
+	<p><%= f.input  :titile 					%></p>
+	<p><%= f.select :priority, Task::PRIORITIES %></p>
+	<p><%= f.input  :completed					%></p>
+	<p><%= f.button :submit						%></p>
+<% end %>
+</div>

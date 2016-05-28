@@ -1,0 +1,9 @@
+<div class="task priority_<%= task.priority %> completed_<%= task.completed %>">
+	<p>
+	<span class="title"><%= task.titile %></span>
+	<%= link_to content_tag('span', '', class: 'fa fa-pencil'), edit_task_path(task), class: 'action' %>
+	<%= link_to content_tag('span', '', class: 'fa fa-trash'), task, method: :delete, class: 'action' %>
+	<%= link_to content_tag('span', '', class: 'fa fa-check-square-o'), complete_task_path(task),
+	data: { method: :put }, class: 'done action' %>
+	</p> 
+</div>
